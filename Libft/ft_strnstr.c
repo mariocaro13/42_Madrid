@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcaro-ro <mcaro-ro@student.42madrid>       +#+  +:+       +#+        */
+/*   By: mcaro-ro <mcaro-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 19:09:10 by mcaro-ro          #+#    #+#             */
-/*   Updated: 2024/01/24 12:35:41 by mcaro-ro         ###   ########.fr       */
+/*   Updated: 2024/02/27 14:59:06 by mcaro-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		}
 		i_hstack++;
 	}
-	return (0);
+	return (NULL);
 }

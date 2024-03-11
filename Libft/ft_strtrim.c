@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcaro-ro <mcaro-ro@student.42madrid>       +#+  +:+       +#+        */
+/*   By: mcaro-ro <mcaro-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 19:23:51 by mcaro-ro          #+#    #+#             */
-/*   Updated: 2024/01/25 19:23:52 by mcaro-ro         ###   ########.fr       */
+/*   Updated: 2024/02/27 14:59:20 by mcaro-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	len;
 
 	if (!s1 || !set)
-		return (0);
+		return (NULL);
 	aux = (char *)s1 + ft_iterate_s1(s1, set);
 	len = ft_get_len(aux, set) + 1;
 	str = (char *)ft_calloc(len, sizeof(char));
@@ -73,5 +73,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 		ft_strlcpy(str, aux, len);
 		return (str);
 	}
-	return (0);
+	return (NULL);
 }

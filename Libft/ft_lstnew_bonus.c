@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcaro-ro <mcaro-ro@student.42madrid>       +#+  +:+       +#+        */
+/*   By: mcaro-ro <mcaro-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 17:59:31 by mcaro-ro          #+#    #+#             */
-/*   Updated: 2024/02/22 18:01:12 by mcaro-ro         ###   ########.fr       */
+/*   Updated: 2024/02/27 16:18:09 by mcaro-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ t_list	*ft_lstnew(void *content)
 	if (node)
 	{
 		node->content = content;
-		node->next = 0;
+		node->next = NULL;
 		return (node);
 	}
 	free(node);
-	return (0);
+	return (NULL);
 }

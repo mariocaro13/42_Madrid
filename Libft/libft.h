@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcaro-ro <mcaro-ro@student.42madrid>       +#+  +:+       +#+        */
+/*   By: mcaro-ro <mcaro-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 16:06:41 by mcaro-ro          #+#    #+#             */
-/*   Updated: 2024/02/22 19:25:20 by mcaro-ro         ###   ########.fr       */
+/*   Updated: 2024/02/27 16:22:35 by mcaro-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		ft_toupper(int c);
 //Converts a upper-case letter to the corresponding lower-case letter.
 int		ft_tolower(int c);
 
-//Test for any character for wich isupper os islower is true.
+//Test for any character for wich isupper or islower is true.
 int		ft_isalpha(int c);
 
 //Test if c is a 7-bit unsigned char value that fits into the ASCII table.
@@ -66,7 +66,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 //Converts the initial portion of the string str to int representation.
 int		ft_atoi(const char *str);
 
-//Converts the int 'n' to string string representation.
+//Converts the int 'n' to string representation.
 char	*ft_itoa(int n);
 
 //The function writes n bytes to 0 to the string s.
@@ -81,7 +81,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n);
 //Copies len bytes from string src to string dst. The two strings may overlap.
 void	*ft_memmove(void *dst, const void *src, size_t len);
 
-//Locate the first occurrence of c convertd to unsigned char in string s.
+//Locate the first occurrence of c converted to unsigned char in string s.
 void	*ft_memchr(const void *s, int c, size_t n);
 
 //Compares byte s1 agains byte s2. Both strings are assumed to be n bytes long.

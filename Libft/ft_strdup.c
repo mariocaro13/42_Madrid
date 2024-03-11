@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcaro-ro <mcaro-ro@student.42madrid>       +#+  +:+       +#+        */
+/*   By: mcaro-ro <mcaro-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 19:22:44 by mcaro-ro          #+#    #+#             */
-/*   Updated: 2024/01/25 19:22:46 by mcaro-ro         ###   ########.fr       */
+/*   Updated: 2024/02/27 14:58:32 by mcaro-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strdup(const char *s1)
 	len = ft_strlen(s1) + 1;
 	pt = (char *)ft_calloc(len, sizeof(char));
 	if (pt == 0)
-		return (0);
+		return (NULL);
 	ft_strlcpy(pt, s1, len);
 	return (pt);
 }

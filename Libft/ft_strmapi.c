@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcaro-ro <mcaro-ro@student.42madrid>       +#+  +:+       +#+        */
+/*   By: mcaro-ro <mcaro-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 16:49:14 by mcaro-ro          #+#    #+#             */
-/*   Updated: 2024/02/22 16:49:17 by mcaro-ro         ###   ########.fr       */
+/*   Updated: 2024/02/27 14:58:56 by mcaro-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	len_s;
 
 	if (!s || !f)
-		return (0);
+		return (NULL);
 	len_s = ft_strlen(s);
 	str = (char *)ft_calloc(len_s + 1, sizeof(char));
 	if (str)
@@ -32,5 +32,5 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		}
 		return (str);
 	}
-	return (0);
+	return (NULL);
 }

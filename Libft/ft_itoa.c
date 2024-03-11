@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcaro-ro <mcaro-ro@student.42madrid>       +#+  +:+       +#+        */
+/*   By: mcaro-ro <mcaro-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 16:47:52 by mcaro-ro          #+#    #+#             */
-/*   Updated: 2024/02/22 16:47:57 by mcaro-ro         ###   ########.fr       */
+/*   Updated: 2024/02/27 13:01:34 by mcaro-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,5 @@ char	*ft_itoa(int n)
 		ft_setstr(str, n, count);
 		return (str);
 	}
-	return (0);
+	return (NULL);
 }

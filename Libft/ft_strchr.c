@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcaro-ro <mcaro-ro@student.42madrid>       +#+  +:+       +#+        */
+/*   By: mcaro-ro <mcaro-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 12:33:01 by mcaro-ro          #+#    #+#             */
-/*   Updated: 2024/01/25 19:07:49 by mcaro-ro         ###   ########.fr       */
+/*   Updated: 2024/02/27 14:57:43 by mcaro-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ char	*ft_strchr(const char *s, int c)
 			return (pt_s);
 		pt_s++;
 	}
-	return (0);
+	return (NULL);
 }

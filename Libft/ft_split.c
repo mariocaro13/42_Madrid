@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcaro-ro <mcaro-ro@student.42madrid>       +#+  +:+       +#+        */
+/*   By: mcaro-ro <mcaro-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 19:24:04 by mcaro-ro          #+#    #+#             */
-/*   Updated: 2024/02/22 17:01:13 by mcaro-ro         ###   ########.fr       */
+/*   Updated: 2024/02/27 14:28:25 by mcaro-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ char	**ft_split(char const *s, char c)
 	size_t	str_count;
 
 	if (!s)
-		return (0);
+		return (NULL);
 	str_count = ft_strcount(s, c);
 	arr = (char **)ft_calloc(str_count, sizeof(char *));
 	if (arr)
@@ -83,5 +83,5 @@ char	**ft_split(char const *s, char c)
 			return (arr);
 	}
 	free(arr);
-	return (0);
+	return (NULL);
 }
