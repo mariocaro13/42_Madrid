@@ -1,9 +1,14 @@
 NAME = libftprintf.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
+
 SOURCE = ft_printf.c
 
+TEST = test_printf.c
+
 OBJECTS = $(SOURCE:.c=.o)
+
+TOBJECTS = $(TEST:.c=.o)
 
 all: $(NAME)
 
@@ -19,5 +24,12 @@ fclean:	clean
 
 re: fclean all
 
+test: $(TOBJECTS)
+	@$(CC) $(CFLAGS) -o test $(TOBJECTS) $(NAME)
+	@./test
+
+tclean: 
+	@rm -f $(TOBJECTS)
+
 .DEFAULT_GOAL := all
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re test tclean
