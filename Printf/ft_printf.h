@@ -3,7 +3,8 @@
 # include <unistd.h>
 # include <stdarg.h>
 
-void	ft_putchar(char c);
+void	ft_writeC(char c);
+int		ft_writeS(char *str, int count);
 int		ft_printf(const char *format, ...);
 
 #endif

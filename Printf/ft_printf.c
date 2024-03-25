@@ -6,18 +6,13 @@ void	ft_escape(const char **format, int *count)
 	{
 		(*format)++;
 		if (**format == 'n')
-			ft_putchar('\n');
+			ft_writeC('\n');
 		else if (**format == 't')
-			ft_putchar('\t');
+			ft_writeC('\t');
 		else
-			ft_putchar('\\');
+			ft_writeC('\\');
 		(*count)++;
 	}
-}
-
-void	ft_putchar(char c)
-{
-	write (1, &c, 1);
 }
 
 int	ft_printf(const char *format, ...)
@@ -35,13 +30,17 @@ int	ft_printf(const char *format, ...)
 			format++;
 			if (*format == 'c')
 			{
-				ft_putchar(va_arg(args, int));
+				ft_writeC(va_arg(args, int));
 				count++;
+			}
+			else if (*format == 's')
+			{
+				count = ft_writeS(va_arg(args, char *), count);
 			}
 		}
 		else
 		{
-			ft_putchar(*format);
+			ft_writeC(*format);
 			count++;
 		}
 		format++;

@@ -2,7 +2,8 @@ NAME = libftprintf.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-SOURCE = ft_printf.c
+SOURCE = ft_printf.c \
+	write.c
 
 TEST = test_printf.c
 
