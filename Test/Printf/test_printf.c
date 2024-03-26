@@ -1,4 +1,4 @@
-#include "ft_printf.h"
+#include "../../Printf/ft_printf.h"
 #include <stdio.h>
 
 void	text()
@@ -38,7 +38,7 @@ void	testC(void)
 
 void	testS(void)
 {
-	char	*str = "I am a string";
+	char	*str = NULL;
 	int	original;
 	int	custom;
 	printf("Testing STRING: \n");

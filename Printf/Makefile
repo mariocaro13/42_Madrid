@@ -5,11 +5,7 @@ CFLAGS = -Wall -Wextra -Werror
 SOURCE = ft_printf.c \
 	write.c
 
-TEST = test_printf.c
-
 OBJECTS = $(SOURCE:.c=.o)
-
-TOBJECTS = $(TEST:.c=.o)
 
 all: $(NAME)
 
@@ -25,12 +21,11 @@ fclean:	clean
 
 re: fclean all
 
-test: $(TOBJECTS)
-	@$(CC) $(CFLAGS) -o test $(TOBJECTS) $(NAME)
-	@./test
+test: 
+	@$(MAKE) -C ../Test/Printf test
 
-tclean: 
-	@rm -f $(TOBJECTS)
+tclean:
+	@$(MAKE) -C ../Test/Printf tclean
 
 .DEFAULT_GOAL := all
 .PHONY: all clean fclean re test tclean
