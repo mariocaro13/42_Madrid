@@ -2,30 +2,45 @@ NAME = libftprintf.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
+LIBFT = libft.a
+LIBFT_DIR = libft
+
 SOURCE = ft_printf.c \
-	write.c
+	 ft_write_escape.c \
+	 ft_write_c.c \
+	 ft_write_s.c \
+	 ft_write_p.c \
 
 OBJECTS = $(SOURCE:.c=.o)
 
-all: $(NAME)
+all: $(LIBFT) $(NAME)
+
+$(LIBFT):
+	$(MAKE) -C $(LIBFT_DIR) --silent
+	cp $(LIBFT_DIR)/$(LIBFT) .
 
 $(NAME): $(OBJECTS)
-	@ar rcs $(NAME) $(OBJECTS)
-	@echo "$(NAME) has been created successfully!"
+	ar rcs $(NAME) $(OBJECTS)
+	echo "\033[0;32m$(NAME) has been created successfully!\033[0m"
 
 clean:
-	@rm -f $(OBJECTS)
+	rm -f $(OBJECTS)
+	$(MAKE) -C $(LIBFT_DIR) clean --silent
 
 fclean:	clean
-	@rm -f $(NAME)
+	rm -f $(NAME)
+	rm -f $(LIBFT)
+	$(MAKE) -C $(LIBFT_DIR) fclean --silent
 
 re: fclean all
 
-test: 
-	@$(MAKE) -C ../Test/Printf test
+test: re	
+	$(MAKE) -C ../Test/Printf test --silent
 
 tclean:
-	@$(MAKE) -C ../Test/Printf tclean
+	$(MAKE) -C ../Test/Printf tclean --silent
 
 .DEFAULT_GOAL := all
+
 .PHONY: all clean fclean re test tclean
+.SILENT:
