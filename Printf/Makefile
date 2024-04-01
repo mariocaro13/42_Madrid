@@ -10,6 +10,7 @@ SOURCE = ft_printf.c \
 	 ft_write_c.c \
 	 ft_write_s.c \
 	 ft_write_p.c \
+	 ft_set_str_hex_num.c \
 
 OBJECTS = $(SOURCE:.c=.o)
 
