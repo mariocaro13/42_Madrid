@@ -10,17 +10,20 @@ SOURCE = ft_printf.c \
 	 ft_write_c.c \
 	 ft_write_s.c \
 	 ft_write_p.c \
+	 ft_write_d.c \
+	 ft_write_i.c \
+	 ft_write_u.c \
 	 ft_set_str_hex_num.c \
 
 OBJECTS = $(SOURCE:.c=.o)
 
-all: $(LIBFT) $(NAME)
+all: $(NAME)
 
 $(LIBFT):
 	$(MAKE) -C $(LIBFT_DIR) --silent
-	cp $(LIBFT_DIR)/$(LIBFT) .
+	cp $(LIBFT_DIR)/$(LIBFT) ./$(NAME)
 
-$(NAME): $(OBJECTS)
+$(NAME): $(LIBFT) $(OBJECTS)
 	ar rcs $(NAME) $(OBJECTS)
 	echo "\033[0;32m$(NAME) has been created successfully!\033[0m"
 
@@ -38,7 +41,7 @@ re: fclean all
 test: re	
 	$(MAKE) -C ../Test/Printf test --silent
 
-tclean:
+tclean: fclean
 	$(MAKE) -C ../Test/Printf tclean --silent
 
 .DEFAULT_GOAL := all
