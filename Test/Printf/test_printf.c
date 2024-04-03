@@ -217,6 +217,86 @@ void    test_unsigned(int num)
         output(original, custom);
 }
 
+/* This function test HEXADECIMAL LOWERCASE FORMAT comparing custom ft_printf to the orignial printf.
+ * return (void);
+ * Some good test could be:
+ *      Normal int
+ *      Negative int
+ *      Max Integer
+ *      MIN INteger
+ *      MAX LONG
+ *      MIN LONG
+ */
+void    test_hexadecimal_lower(int num)
+{
+        int     original;
+        int     custom;
+        printf("%s%s%s", color_blue, "Testing HEXADECIMAL LOWERCASE FORMAT: \n", color_default);
+        printf("O: ");
+
+        //Test here
+        original = printf("%x", num);
+        printf(". Out: %d. \n", original);
+
+        aux_text();
+
+        //Test here
+        custom = ft_printf("%x", num);
+        printf(". Out: %d.\n", custom);
+        output(original, custom);
+}
+
+/* This function test HEXADECIMAL UPPECASE FORMAT comparing custom ft_printf to the orignial printf.
+ * return (void);
+ * Some good test could be:
+ *      Normal int
+ *      Negative int
+ *      Max Integer
+ *      MIN INteger
+ *      MAX LONG
+ *      MIN LONG
+ */
+void    test_hexadecimal_upper(int num)
+{
+        int     original;
+        int     custom;
+        printf("%s%s%s", color_blue, "Testing HEXADECIMAL UPPERCASE FORMAT: \n", color_default);
+        printf("O: ");
+
+        //Test here
+        original = printf("%X", num);
+        printf(". Out: %d. \n", original);
+
+        aux_text();
+
+        //Test here
+        custom = ft_printf("%X", num);
+        printf(". Out: %d.\n", custom);
+        output(original, custom);
+}
+
+/* This function test PERCENT SIGN comparing custom ft_printf to the orignial printf.
+ * return (void);
+ */
+void    test_percent_sign(void)
+{
+        int     original;
+        int     custom;
+        printf("%s%s%s", color_blue, "Testing PERCENT SIGN: \n", color_default);
+        printf("O: ");
+
+        //Test here
+        original = printf("%%");
+        printf(". Out: %d. \n", original);
+
+        aux_text();
+
+        //Test here
+        custom = ft_printf("%%");
+        printf(". Out: %d.\n", custom);
+        output(original, custom);
+}
+
 int	main (void)
 {
 	int	void_ptr;
@@ -231,6 +311,9 @@ int	main (void)
 	test_void_pointer((void *)&void_ptr);
 	test_decimal(13);
 	test_integer(-11);
-	test_unsigned(2002);
+	test_unsigned(-2002);
+	test_hexadecimal_lower(-130000000);
+	test_hexadecimal_upper(-130000000);
+	test_percent_sign();
 	return (0);
 }

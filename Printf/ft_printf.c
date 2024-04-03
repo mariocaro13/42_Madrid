@@ -3,41 +3,49 @@
 void	ft_switch_format(va_list args, const char c, int *count)
 {
 	if (c == 'c')
-		ft_write_c(va_arg(args, int), count);
+		ft_putchar_count(va_arg(args, int), FD, count);
 	else if (c == 's')
-		ft_write_s(va_arg(args, char *), count);
+		ft_putstr_count(va_arg(args, char *), FD, count);
 	else if (c == 'p')
-		ft_write_p(va_arg(args, void *), count);
+		ft_putpointer_count(va_arg(args, void *), FD, count);
 	else if (c == 'd')
-		ft_write_d(va_arg(args, int), count);
+		ft_putnbr_in_base_x(va_arg(args, int), BASE_DEC, FD, count);
 	else if (c == 'i')
-		ft_write_i(va_arg(args, int), count);
+		ft_putnbr_in_base_x(va_arg(args, int), BASE_DEC, FD, count);
 	else if (c == 'u')
-		ft_write_u(va_arg(args, unsigned long), count);
+		ft_putnbr_in_base_x(va_arg(args, unsigned long), BASE_DEC, FD, count);
+	else if (c == 'x')
+		ft_putnbr_in_base_x(va_arg(args, long), BASE_HEX_LOWER, FD, count);
+	else if (c == 'X')
+		ft_putnbr_in_base_x(va_arg(args, long), BASE_HEX_UPPER, FD, count);
+	else if (c == '%')
+		ft_putchar_count('%', FD, count);
 }
 
-int	ft_printf(const char *format, ...)
+int	ft_printf(const char *str, ...)
 {
 	int		count;
 	va_list	args;
 
+	if (!str)
+		return (-1);
 	count = 0;
-	va_start(args, format);
-	while (*format)
+	va_start(args, str);
+	while (*str)
 	{
-		if (*format == '\\')
+		if (*str == '\\')
 		{
-			format++;
-			ft_write_escape(*format, &count);
+			str++;
+			ft_putescape_count(*str, FD, &count);
 		}
-		if (*format == '%')
+		if (*str == '%')
 		{
-			format++;
-			ft_switch_format(args, *format, &count);
+			str++;
+			ft_switch_format(args, *str, &count);
 		}
 		else
-			ft_write_c(*format, &count);
-		format++;
+			ft_putchar_count(*str, FD, &count);
+		str++;
 	}
 	va_end(args);
 	return (count);

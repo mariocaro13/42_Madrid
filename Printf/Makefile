@@ -6,14 +6,11 @@ LIBFT = libft.a
 LIBFT_DIR = libft
 
 SOURCE = ft_printf.c \
-	 ft_write_escape.c \
-	 ft_write_c.c \
-	 ft_write_s.c \
-	 ft_write_p.c \
-	 ft_write_d.c \
-	 ft_write_i.c \
-	 ft_write_u.c \
-	 ft_set_str_hex_num.c \
+	 ft_putescape_count.c \
+	 ft_putchar_count.c \
+	 ft_putstr_count.c \
+	 ft_putpointer_count.c \
+	 ft_putnbr_in_base_x.c \
 
 OBJECTS = $(SOURCE:.c=.o)
 
@@ -33,7 +30,6 @@ clean:
 
 fclean:	clean
 	rm -f $(NAME)
-	rm -f $(LIBFT)
 	$(MAKE) -C $(LIBFT_DIR) fclean --silent
 
 re: fclean all
