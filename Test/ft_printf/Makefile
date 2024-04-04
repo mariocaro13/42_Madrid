@@ -2,7 +2,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 DIR = -I$(LIBDIR)
 
-LIBDIR = ../../Printf
+LIBDIR = ../../ft_printf
 LIBNAME = ftprintf
 
 TEST = test_printf.c

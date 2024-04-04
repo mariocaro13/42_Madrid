@@ -1,4 +1,4 @@
-#include "../../Printf/ft_printf.h"
+#include "../../ft_printf/ft_printf.h"
 #include <stdio.h>
 
 const char *color_red = "\033[1;31m";
