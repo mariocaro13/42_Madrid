@@ -6,6 +6,7 @@ LIBFT = libft.a
 LIBFT_DIR = libft
 
 SOURCE = ft_printf.c \
+	 ft_switch_format.c \
 	 ft_putescape_count.c \
 	 ft_putchar_count.c \
 	 ft_putstr_count.c \

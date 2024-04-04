@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-void	ft_putescape_count(const char c, const int fd, int *count)
+void	ft_putescape_count(const unsigned char c, const int fd, int *count)
 {
 	if (c == 'n')
 	{
