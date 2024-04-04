@@ -31,6 +31,9 @@ void	output(int original, int custom)
  * return (void);
  * Some good test could be:
  *      Normal char
+ *      Char by ascci value
+ *      Negative int value
+ *      Escape valor
  *      NULL
  */
 void	test_char(char c)
