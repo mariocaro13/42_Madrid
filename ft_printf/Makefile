@@ -7,7 +7,6 @@ LIBFT_DIR = libft
 
 SOURCE = ft_printf.c \
 	 ft_switch_format.c \
-	 ft_putescape_count.c \
 	 ft_putchar_count.c \
 	 ft_putstr_count.c \
 	 ft_putpointer_count.c \
@@ -36,10 +35,10 @@ fclean:	clean
 re: fclean all
 
 test: re	
-	$(MAKE) -C ../Test/Printf test --silent
+	$(MAKE) -C ../Test/ft_printf test --silent
 
 tclean: fclean
-	$(MAKE) -C ../Test/Printf tclean --silent
+	$(MAKE) -C ../Test/ft_printf tclean --silent
 
 .DEFAULT_GOAL := all
 

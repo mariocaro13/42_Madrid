@@ -300,6 +300,28 @@ void    test_percent_sign(void)
         output(original, custom);
 }
 
+/* This function test PERCENT SIGN comparing custom ft_printf to the orignial printf.
+ * return (void);
+ */
+void    test_escape(char *str)
+{
+        int     original;
+        int     custom;
+        printf("%s%s%s", color_blue, "Testing ESCAPE VALUES: \n", color_default);
+        printf("O: ");
+
+        //Test here
+        original = printf("\n%s", str);
+        printf(". Out: %d. \n", original);
+
+        aux_text();
+
+        //Test here
+        custom = ft_printf("\n%s", str);
+        printf(". Out: %d.\n", custom);
+        output(original, custom);
+}
+
 int	main (void)
 {
 	int	void_ptr;
@@ -318,5 +340,6 @@ int	main (void)
 	test_hexadecimal_lower(-130000000);
 	test_hexadecimal_upper(-130000000);
 	test_percent_sign();
+	test_escape("\n");
 	return (0);
 }
