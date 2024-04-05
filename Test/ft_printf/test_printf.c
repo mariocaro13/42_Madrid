@@ -300,8 +300,14 @@ void    test_percent_sign(void)
         output(original, custom);
 }
 
-/* This function test PERCENT SIGN comparing custom ft_printf to the orignial printf.
+/* This function test ESCAPE VALUES comparing custom ft_printf to the orignial printf.
  * return (void);
+ * 	Some good test could be:
+ * 	\n
+ * 	\t
+ * 	\"
+ * 	\'
+ * 	\\
  */
 void    test_escape(char *str)
 {

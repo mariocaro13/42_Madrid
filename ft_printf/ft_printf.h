@@ -12,7 +12,6 @@ int		ft_printf(const char *format, ...);
 void	ft_switch_format(va_list args, const unsigned char c, int *count);
 void	ft_putchar_count(const unsigned char c, const int fd, int *count);
 void	ft_putstr_count(const char *str, const int fd, int *count);
-void	ft_putescape_count(const unsigned char c, const int fd, int *count);
 void	ft_putpointer_count(void *pointer, const int fd, int *count);
 void	ft_putnbr_in_base_x(long nbr, char *base, int fd, int *count);
 

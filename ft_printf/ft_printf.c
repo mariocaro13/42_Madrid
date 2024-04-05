@@ -11,11 +11,6 @@ int	ft_printf(const char *str, ...)
 	va_start(args, str);
 	while (*str)
 	{
-		if (*str == '\\')
-		{
-			str++;
-			ft_putescape_count(*str, FD, &count);
-		}
 		if (*str == '%')
 		{
 			str++;
