@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mcaro-ro <mcaro-ro@student.42madrid>       +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/04/17 12:10:35 by mcaro-ro          #+#    #+#              #
+#    Updated: 2024/04/23 20:53:21 by mcaro-ro         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libftprintf.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -10,7 +22,8 @@ SOURCE = ft_printf.c \
 	 ft_putchar_count.c \
 	 ft_putstr_count.c \
 	 ft_putpointer_count.c \
-	 ft_putnbr_in_base_x.c \
+	 ft_putnbr.c \
+	 ft_putnbr_base.c \
 
 OBJECTS = $(SOURCE:.c=.o)
 
@@ -34,13 +47,7 @@ fclean:	clean
 
 re: fclean all
 
-test: re	
-	$(MAKE) -C ../Test/ft_printf test --silent
-
-tclean: fclean
-	$(MAKE) -C ../Test/ft_printf tclean --silent
-
 .DEFAULT_GOAL := all
 
-.PHONY: all clean fclean re test tclean
+.PHONY: all clean fclean re
 .SILENT:
