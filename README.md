@@ -1,4 +1,4 @@
-## 42 Madrid
+# 42 Madrid
 
 This project collects all my projects realized in 42 Madrid.
 
