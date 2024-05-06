@@ -1,5 +1,5 @@
 <div align="center">
-   	<h1 align="center">42 Madrid Proyects</h1>
+   	<h1 align="center">42 Madrid Projects</h1>
     This are all my projects realized in 42 Madrid.
 </div>
 <br>
