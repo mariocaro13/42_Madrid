@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_count.c                                 :+:      :+:    :+:   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcaro-ro <mcaro-ro@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 12:11:22 by mcaro-ro          #+#    #+#             */
-/*   Updated: 2024/04/17 12:11:24 by mcaro-ro         ###   ########.fr       */
+/*   Created: 2024/04/23 20:56:44 by mcaro-ro          #+#    #+#             */
+/*   Updated: 2024/04/23 20:57:23 by mcaro-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putchar_count(const unsigned char c, const int fd, int *count)
+void	ft_putnbr_base(unsigned long nbr, char *base, const int fd, int *count)
 {
-	ft_putchar_fd(c, fd);
-	(*count)++;
+	unsigned long	len;
+
+	if (!base || !fd || !count)
+		return ;
+	len = ft_strlen(base);
+	if (nbr >= len)
+		ft_putnbr_base(nbr / len, base, fd, count);
+	ft_putchar_count(base[nbr % len], fd, count);
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_switch_format.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mcaro-ro <mcaro-ro@student.42madrid>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/17 12:11:58 by mcaro-ro          #+#    #+#             */
+/*   Updated: 2024/04/23 20:54:39 by mcaro-ro         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 void	ft_switch_format(va_list args, const unsigned char c, int *count)
@@ -7,17 +19,17 @@ void	ft_switch_format(va_list args, const unsigned char c, int *count)
 	else if (c == 's')
 		ft_putstr_count(va_arg(args, char *), FD, count);
 	else if (c == 'p')
-		ft_putpointer_count(va_arg(args, void *), FD, count);
+		ft_putpointer_count(va_arg(args, unsigned long), FD, count);
 	else if (c == 'd')
-		ft_putnbr_in_base_x(va_arg(args, int), BASE_DEC, FD, count);
+		ft_putnbr(va_arg(args, int), BASE_DEC, FD, count);
 	else if (c == 'i')
-		ft_putnbr_in_base_x(va_arg(args, int), BASE_DEC, FD, count);
+		ft_putnbr(va_arg(args, int), BASE_DEC, FD, count);
 	else if (c == 'u')
-		ft_putnbr_in_base_x(va_arg(args, unsigned long), BASE_DEC, FD, count);
+		ft_putnbr_base(va_arg(args, unsigned int), BASE_DEC, FD, count);
 	else if (c == 'x')
-		ft_putnbr_in_base_x(va_arg(args, long), BASE_HEX_LOWER, FD, count);
+		ft_putnbr_base(va_arg(args, unsigned int), BASE_HEX_LOWER, FD, count);
 	else if (c == 'X')
-		ft_putnbr_in_base_x(va_arg(args, long), BASE_HEX_UPPER, FD, count);
+		ft_putnbr_base(va_arg(args, unsigned int), BASE_HEX_UPPER, FD, count);
 	else if (c == '%')
 		ft_putchar_count('%', FD, count);
 }
