@@ -1,12 +1,8 @@
-<div align="center">
-   	<h1 align="center">42 Madrid Projects</h1>
-    This are all my projects realized in 42 Madrid.
-</div>
-<br>
-<div align="center">
+# 42 Madrid Projects
+This are all my projects realized in 42 Madrid.
   
 | 💻 Project | 📝 Repo | 💯 Score |
 |:------:|:-------:|:------------------:|
 | **Libft** | [libft](https://github.com/mariocaro13/libft.git) | 125/100 |
 | **Ft_printf** | [ft_printf](https://github.com/mariocaro13/ft_printf.git) | 100/100 |
-</div>
+| **GNL** | [get_next_line](https://github.com/mariocaro13/get_next_line.git) | 0/100 |
