@@ -1,6 +1,6 @@
 <div align="center">
    	<h1 align="center">42 Madrid Proyects</h1>
-    This project collects all my projects realized in 42 Madrid.
+    This are all my projects realized in 42 Madrid.
 </div>
 <br>
 <div align="center">
