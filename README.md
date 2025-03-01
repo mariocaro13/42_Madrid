@@ -9,4 +9,4 @@ This are all my projects realized in 42 Madrid.
 | **B2BR** | [Born2BeRoot]() | 125/100 |
 | **FRACT'OL** | [fractol](https://github.com/mariocaro13/fract-ol) | 100/100 |
 | **PIPEX** | [pipex](https://github.com/mariocaro13/pipex) | 100/100 |
-| **PUSH_SWAP** | [push_swap](https://github.com/mariocaro13/push_swap) | 0/100 |
+| **PUSH_SWAP** | [push_swap](https://github.com/mariocaro13/push_swap) | 98/100 |
